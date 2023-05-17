@@ -1,0 +1,279 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+  height: 100%;
+}
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+body {
+  height: 100vh;
+  position: relative;
+  background-color: black;
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 400;
+}
+
+header {
+  background-color: rgb(2, 44, 173);
+  height: 5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ophir {
+  height: 5em;
+  width: 15em;
+  display: flex;
+}
+
+.ophir-logo {
+  object-fit: contain;
+}
+
+.connect-wallet {
+  margin-right: 2em;
+  padding: 0.5em;
+  background-color: transparent;
+  color: white;
+  border: 0.1em solid white;
+  border-radius: 0.5em;
+  transition: background-color 0.3s;
+  transition: color 0.3s;
+}
+
+.connect-wallet:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.connect-wallet:active {
+  background-color: white;
+  color: black;
+}
+
+.section-2 {
+  display: flex;
+  gap: 2em;
+  margin-top: 3em;
+  margin-left: 15em;
+  margin-right: 15em;
+}
+
+.vote-block-text {
+  display: block;
+  width: 60%;
+}
+
+.vote-block-title {
+  margin-bottom: 0.5em;
+  font-size: 1.5em;
+  color: blueviolet;
+}
+
+.vote-block-paragraph {
+  margin-bottom: 1em;
+}
+
+.section-2-img-div {
+  display: flex;
+  justify-content: stretch;
+  width: 45%;
+}
+
+.section-2-img {
+  display: flex;
+  object-fit: fill;
+  border-radius: 0.5em;
+}
+
+.section-3 {
+  margin-top: 3.5em;
+}
+
+.section-3-title {
+  text-align: center;
+  font-size: 2em;
+}
+
+.vote-choices {
+  display: flex;
+  margin: 2em;
+  gap: 1em;
+}
+
+.vote-choice {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 1px 1px 4px rgba(255, 255, 255, 0.4);
+  border-radius: 0.5em;
+  text-align: center;
+  padding: 1em;
+}
+
+.vote-1-text {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.vote-choice-img {
+  width: 30em;
+  height: 15em;
+  margin-bottom: 1em;
+  border-radius: 0.5em;
+}
+
+.vote-paragraph {
+  padding: 1em;
+}
+
+.vote-2-text {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+form {
+  display: block;
+  text-align: center;
+}
+
+.form-button {
+  margin-top: 0.5em;
+  border-radius: 0.5em;
+  padding: 0.3em 0.5em;
+  font-size: 1.2em;
+  background-color: blueviolet;
+  color: white;
+  border: none;
+  transition: background-color 0.05s;
+  transition: padding 0.05s;
+  transition: color 0.05s;
+}
+
+.form-button:hover {
+  background-color: rgba(128, 0, 128, 0.9);
+}
+
+.form-button:active {
+  background-color: rgba(128, 0, 128, 0.7);
+  color: white;
+  padding: 0.4em 0.6em;
+}
+
+.check-button {
+  display: flex;
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+  margin-left: 68em;
+  border-radius: 0.5em;
+  padding: 0.3em 0.5em;
+  font-size: 1.2em;
+  background-color: blueviolet;
+  color: white;
+  border: none;
+  transition: background-color 0.05s;
+  transition: padding 0.05s;
+  transition: color 0.05s;
+}
+
+.check-button:hover {
+  background-color: rgba(128, 0, 128, 0.9);
+}
+
+.check-button:active {
+  background-color: rgba(128, 0, 128, 0.7);
+  color: white;
+  padding: 0.4em 0.6em;
+}
+
+footer {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  background-color: rgb(2, 44, 173);
+  padding: 1em;
+}
+
+@media screen and (max-width: 1200px) {
+  .section-2 {
+    display: flex;
+    flex-direction: column;
+    margin: 3em;
+    align-items: center;
+  }
+
+  .section-2-img-div {
+    width: 60%;
+  }
+
+  .check-button {
+    font-size: 1em;
+    margin-top: 1.5em;
+    margin-left: 36em;
+  }
+}
